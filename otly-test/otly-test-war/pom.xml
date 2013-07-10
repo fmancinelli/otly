@@ -18,6 +18,7 @@
       <groupId>com.google.gwt</groupId>
       <artifactId>gwt-user</artifactId>
     </dependency>
+
     <dependency>
       <groupId>io.otly</groupId>
       <artifactId>otly-api</artifactId>
@@ -25,9 +26,38 @@
     </dependency>
     <dependency>
       <groupId>io.otly</groupId>
+      <artifactId>otly-api</artifactId>
+      <version>${otly.version}</version>
+      <classifier>sources</classifier>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>io.otly</groupId>
+      <artifactId>otly-spi</artifactId>
+      <version>${otly.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.otly</groupId>
+      <artifactId>otly-spi</artifactId>
+      <version>${otly.version}</version>
+      <classifier>sources</classifier>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>io.otly</groupId>
       <artifactId>otly-core</artifactId>
       <version>${otly.version}</version>
     </dependency>
+    <dependency>
+      <groupId>io.otly</groupId>
+      <artifactId>otly-core</artifactId>
+      <version>${otly.version}</version>
+      <classifier>sources</classifier>
+      <scope>provided</scope>
+    </dependency>
+
     <dependency>
       <groupId>io.otly</groupId>
       <artifactId>otly-documentmodel-simpletext</artifactId>
@@ -35,14 +65,57 @@
     </dependency>
     <dependency>
       <groupId>io.otly</groupId>
+      <artifactId>otly-documentmodel-simpletext</artifactId>
+      <version>${otly.version}</version>
+      <classifier>sources</classifier>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>io.otly</groupId>
       <artifactId>otly-binding-simpletext-plaintextdocument</artifactId>
+      <version>${otly.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.otly</groupId>
+      <artifactId>otly-binding-simpletext-plaintextdocument</artifactId>
+      <version>${otly.version}</version>
+      <classifier>sources</classifier>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>io.otly</groupId>
+      <artifactId>otly-binding-simpletext-htmltextarea</artifactId>
       <version>${otly.version}</version>
     </dependency>
     <dependency>
       <groupId>io.otly</groupId>
       <artifactId>otly-binding-simpletext-htmltextarea</artifactId>
       <version>${otly.version}</version>
+      <classifier>sources</classifier>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>gwt-maven-plugin</artifactId>
+        <configuration>
+          <module>io.otly.Test</module>
+          <style>OBF</style>
+          <runTarget>OtlyTest.html</runTarget>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 </project>
