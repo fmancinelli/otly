@@ -1,7 +1,10 @@
 package io.otly.core.gwt.shared.internal;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 import io.otly.spi.gwt.shared.BindingFactory;
 
@@ -55,13 +58,15 @@ public class DocumentModelBindingFactoryRegistry
      *
      * @param documentModelClass the document model type.
      * @param targetClass the target type.
-     * @param variant the variant.
+     * @param variant the variant. null for default variant.
      * @param bindingFactory the binding factory.
      */
     public void registerBinding(Class<?> documentModelClass, Class<?> targetClass, String variant,
             BindingFactory bindingFactory)
     {
-        idToBindingFactoryMap.put(getId(documentModelClass, targetClass, variant), bindingFactory);
+        idToBindingFactoryMap
+                .put(getId(documentModelClass, targetClass, variant != null ? variant : DEFAULT_VARIANT_ID),
+                        bindingFactory);
     }
 
     /**
@@ -87,6 +92,11 @@ public class DocumentModelBindingFactoryRegistry
     public BindingFactory getBindingFactory(Class<?> documentModelClass, Class<?> targetClass, String variant)
     {
         return idToBindingFactoryMap.get(getId(documentModelClass, targetClass, variant));
+    }
+
+    public Collection<BindingFactory> getRegisteredBindingFactories()
+    {
+        return Collections.unmodifiableCollection(idToBindingFactoryMap.values());
     }
 
     /**

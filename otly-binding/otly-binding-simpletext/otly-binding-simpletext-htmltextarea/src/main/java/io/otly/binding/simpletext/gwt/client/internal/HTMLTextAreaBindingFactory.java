@@ -20,6 +20,21 @@ public class HTMLTextAreaBindingFactory implements BindingFactory
      */
     protected Logger logger = Logger.getLogger(HTMLTextAreaBindingFactory.class.getName());
 
+    @Override public Class getDocumentModelType()
+    {
+        return SimpleTextDocumentModel.class;
+    }
+
+    @Override public Class getTargetType()
+    {
+        return JavaScriptObject.class;
+    }
+
+    @Override public String getTargetVariant()
+    {
+        return Constants.HTML_TEXTAREA_VARIANT_ID;
+    }
+
     @Override public <T> void createBinding(DocumentModel documentModel, T target)
     {
         if ((documentModel instanceof SimpleTextDocumentModel) && (target instanceof JavaScriptObject)) {

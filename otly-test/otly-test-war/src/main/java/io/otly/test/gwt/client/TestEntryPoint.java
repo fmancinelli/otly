@@ -3,7 +3,7 @@ package io.otly.test.gwt.client;
 import java.util.logging.Logger;
 
 /**
- * Otly test module.
+ * Core test module.
  *
  * This module is used for building a web application containing all the elements of the OTLY framework for testing
  * purposes.

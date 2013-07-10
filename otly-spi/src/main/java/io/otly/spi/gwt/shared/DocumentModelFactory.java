@@ -8,6 +8,11 @@ package io.otly.spi.gwt.shared;
 public interface DocumentModelFactory
 {
     /**
+     * @return the type id of the document models created by this factory.
+     */
+    String getDocumentModelTypeId();
+
+    /**
      * @return the document model.
      */
     DocumentModel createDocumentModel();

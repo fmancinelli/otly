@@ -10,6 +10,11 @@ import io.otly.spi.gwt.shared.DocumentModel;
  */
 public class SimpleTextDocumentModelFactory implements DocumentModelFactory
 {
+    @Override public String getDocumentModelTypeId()
+    {
+        return Constants.SIMPLE_TEXT_DOCUMENT_MODEL_TYPE_ID;
+    }
+
     @Override public DocumentModel createDocumentModel()
     {
         return new SimpleTextDocumentModel();

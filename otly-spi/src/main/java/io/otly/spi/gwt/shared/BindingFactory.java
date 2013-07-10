@@ -34,6 +34,12 @@ package io.otly.spi.gwt.shared;
  */
 public interface BindingFactory
 {
+    Class getDocumentModelType();
+
+    Class getTargetType();
+
+    String getTargetVariant();
+
     /**
      * Bind a document model to a target.
      *

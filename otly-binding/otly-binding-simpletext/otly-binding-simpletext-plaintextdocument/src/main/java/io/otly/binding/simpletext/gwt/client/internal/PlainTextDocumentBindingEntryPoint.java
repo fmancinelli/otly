@@ -36,8 +36,10 @@ public class PlainTextDocumentBindingEntryPoint implements EntryPoint
         DocumentModelBindingFactoryRegistry documentModelBindingFactoryRegistry =
                 DocumentModelBindingFactoryRegistry.getInstance();
 
-        documentModelBindingFactoryRegistry.registerBinding(SimpleTextDocumentModel.class, PlainTextDocument.class,
-                new PlainTextDocumentBindingFactory());
+        PlainTextDocumentBindingFactory plainTextDocumentBindingFactory = new PlainTextDocumentBindingFactory();
+
+        documentModelBindingFactoryRegistry.registerBinding(plainTextDocumentBindingFactory.getDocumentModelType(),
+                plainTextDocumentBindingFactory.getTargetType(), plainTextDocumentBindingFactory);
 
         logger.info("PlainTextDocument binding for SimpleTextDcumentModel module loaded.");
     }

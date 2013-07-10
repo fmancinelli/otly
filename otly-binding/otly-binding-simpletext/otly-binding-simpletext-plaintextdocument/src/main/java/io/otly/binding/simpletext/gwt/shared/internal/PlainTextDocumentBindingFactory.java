@@ -16,6 +16,21 @@ public class PlainTextDocumentBindingFactory implements BindingFactory
 {
     protected Logger logger = Logger.getLogger(PlainTextDocumentBindingFactory.class.getName());
 
+    @Override public Class getDocumentModelType()
+    {
+        return SimpleTextDocumentModel.class;
+    }
+
+    @Override public Class getTargetType()
+    {
+        return PlainTextDocument.class;
+    }
+
+    @Override public String getTargetVariant()
+    {
+        return null;
+    }
+
     @Override public <T> void createBinding(DocumentModel documentModel, T target)
     {
         if ((documentModel instanceof SimpleTextDocumentModel) && (target instanceof PlainTextDocument)) {

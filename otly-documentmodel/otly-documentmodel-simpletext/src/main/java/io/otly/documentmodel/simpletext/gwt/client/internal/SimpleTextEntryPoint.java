@@ -19,7 +19,7 @@ public class SimpleTextEntryPoint implements com.google.gwt.core.client.EntryPoi
     {
         logger.fine("Registering Simple Text document model factory.");
         DocumentModelFactoryRegistry documentModelFactoryRegistry = DocumentModelFactoryRegistry.getInstance();
-        documentModelFactoryRegistry.registerDocumentModelFactory(Constants.SIMPLE_TEXT_DOCUMENT_MODEL_ID,
+        documentModelFactoryRegistry.registerDocumentModelFactory(Constants.SIMPLE_TEXT_DOCUMENT_MODEL_TYPE_ID,
                 new SimpleTextDocumentModelFactory());
 
         logger.info("Simple Text document model module loaded.");

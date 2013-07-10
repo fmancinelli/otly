@@ -9,9 +9,9 @@ import io.otly.core.gwt.shared.internal.DocumentModelFactoryRegistry;
 import io.otly.spi.gwt.shared.DocumentModelFactory;
 
 /**
- * Otly entry point in JavaScript land.
+ * Core entry point in JavaScript land.
  *
- * Pure JavaScript client can instantiate an object of this class to have access to Otly functionality.
+ * Pure JavaScript client can instantiate an object of this class to have access to Core functionality.
  *
  * @version $Id$
  */

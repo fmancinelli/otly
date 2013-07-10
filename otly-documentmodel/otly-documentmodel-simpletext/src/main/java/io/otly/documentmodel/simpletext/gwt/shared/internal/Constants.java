@@ -7,5 +7,5 @@ package io.otly.documentmodel.simpletext.gwt.shared.internal;
  */
 public final class Constants
 {
-    public static final String SIMPLE_TEXT_DOCUMENT_MODEL_ID = "simpletext";
+    public static final String SIMPLE_TEXT_DOCUMENT_MODEL_TYPE_ID = "simpletext";
 }
