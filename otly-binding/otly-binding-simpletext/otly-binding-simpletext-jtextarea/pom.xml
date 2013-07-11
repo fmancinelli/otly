@@ -11,7 +11,28 @@
   <artifactId>otly-binding-simpletext-jtextarea</artifactId>
   <name>OTLY - Binding - Simple Text - JTextArea</name>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>io.otly</groupId>
+      <artifactId>otly-documentmodel-simpletext</artifactId>
+      <version>${otly.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.otly</groupId>
+      <artifactId>otly-spi</artifactId>
+      <version>${otly.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.otly</groupId>
+      <artifactId>otly-core</artifactId>
+      <version>${otly.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 </project>
