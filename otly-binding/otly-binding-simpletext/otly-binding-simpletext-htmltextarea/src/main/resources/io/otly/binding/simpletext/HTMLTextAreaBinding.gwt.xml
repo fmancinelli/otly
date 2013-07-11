@@ -3,7 +3,11 @@
 <module>
 
   <inherits name='com.google.gwt.user.User'/>
+  <inherits name='io.otly.Core'/>
+  <inherits name='io.otly.documentmodel.SimpleText'/>
 
   <entry-point class='io.otly.binding.simpletext.gwt.client.internal.HTMLTextAreaBindingEntryPoint'/>
+
+  <source path="gwt"/>
 
 </module>
