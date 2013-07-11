@@ -15,13 +15,24 @@
   <dependencies>
     <dependency>
       <groupId>io.otly</groupId>
-      <artifactId>otly-api</artifactId>
+      <artifactId>otly-core</artifactId>
+      <version>${otly.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.otly</groupId>
+      <artifactId>otly-spi</artifactId>
       <version>${otly.version}</version>
     </dependency>
     <dependency>
       <groupId>io.otly</groupId>
       <artifactId>otly-documentmodel-simpletext</artifactId>
       <version>${otly.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 
